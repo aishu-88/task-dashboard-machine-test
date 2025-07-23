@@ -1,6 +1,6 @@
-/* Login.css */
 
-/* Renamed from auth-wrapper to form-center-wrapper */
+
+/* making form center */
 .form-center-wrapper {
   display:flex;
   justify-content: center;
@@ -10,7 +10,7 @@
   background-color: #edebe6;
 }
 
-/* Renamed from auth-box to form-container */
+/* for form styling */
 .form-container {
   width: 100%;
   right: 50%;
