@@ -19,7 +19,7 @@ useEffect(() => {
     localStorage.setItem('darkMode', darkMode);
   }, [darkMode]);
 
-  // 🔄 Fetch tasks from JSONPlaceholder
+  // Fetch tasks from JSONPlaceholder
   const fetchTasks = async () => {
     try {
      
@@ -37,19 +37,19 @@ useEffect(() => {
     
   }, []);
 
-  // 🧹 Filtered tasks
+  // Filter tasks
   const filteredTasks = tasks.filter((task) => {
     if (filter === 'completed') return task.completed;
     if (filter === 'pending') return !task.completed;
     return true;
   });
 
-  // 🔃 Sorted tasks
+  // Sorted tasks
   const sortedTasks = [...filteredTasks].sort((a, b) => {
     return sortOrder === 'asc' ? a.id - b.id : b.id - a.id;
   });
  sortedTasks.unshift(newTask)
-  // ✅ Mark task as completed
+  //  Mark task as completed
   const markComplete = (id) => {
     const updated = tasks.map(task =>
       task.id === id ? { ...task, completed: true } : task
@@ -57,7 +57,7 @@ useEffect(() => {
     setTasks(updated);
   };
 
-  // ❌ Delete task
+  //  Delete 
   const deleteTask = (id) => {
     const confirmDelete = window.confirm('Are you sure you want to delete this task?');
     if (confirmDelete) {
