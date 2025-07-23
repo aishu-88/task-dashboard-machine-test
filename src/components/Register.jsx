@@ -7,7 +7,6 @@ import axios from 'axios';
 import { useAuth } from '../context/AuthContext';
 import './Login.css'
 
-//  Validation schema using Yup
 const schema = yup.object().shape({
     name:yup.string().required('Name is eequired'),
     email:yup.string().email().required('Email is required'),
