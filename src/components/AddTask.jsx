@@ -9,6 +9,7 @@ const schema = yup.object().shape({
   title: yup.string().required('Title is required'),
   completed: yup.boolean(),
 });
+//for adding
 
 const AddTask = () => {
   const { addTask } = useTasks();
