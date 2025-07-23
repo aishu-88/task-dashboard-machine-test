@@ -1,0 +1,22 @@
+/* Login.css */
+
+/* Renamed from auth-wrapper to form-center-wrapper */
+.form-center-wrapper {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #edebe6;
+}
+
+/* Renamed from auth-box to form-container */
+.form-container {
+  width: 100%;
+  right: 50%;
+  max-width: 400px;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
