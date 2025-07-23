@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useTasks } from '../context/TaskContext';
 import axios from 'axios';
 
+
 const EditTask = () => {
   const { id } = useParams();
   const { updateTask } = useTasks();
@@ -10,7 +11,7 @@ const EditTask = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log("HIIIIII");
+    // console.log("HIIIIII");
     
     axios.get(`https://jsonplaceholder.typicode.com/todos/${id}`)
       .then((res) => setTask(res.data))
