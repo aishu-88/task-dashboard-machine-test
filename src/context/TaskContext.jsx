@@ -9,7 +9,7 @@ export const TaskProvider = ({ children }) => {
   const [tasks, setTasks] = useState([]);
   const [newTask,setNewTask]=useState({})
 
-  // Load tasks initially
+  
   useEffect(() => {
     
     axios.get('https://jsonplaceholder.typicode.com/todos?_limit=10')
@@ -18,13 +18,13 @@ export const TaskProvider = ({ children }) => {
      
   }, []);
 
-  // Add new task
+  // aadd new task
   const addTask = async (task) => {
     const res = await axios.post('https://jsonplaceholder.typicode.com/todos', task);
     setNewTask(res.data)
   };
 
-  // Edit task
+  // edit task
   const updateTask = async (id, updatedTask) => {
   
     
@@ -35,7 +35,7 @@ export const TaskProvider = ({ children }) => {
     );
   };
 
-  // Delete task
+  // delete task
   const deleteTask = async (id) => {
     await axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`);
     setTasks(tasks.filter((task) => task.id !== id));
