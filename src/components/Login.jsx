@@ -6,8 +6,6 @@ import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 import './Login.css'
 
-
-
 const schema = yup.object().shape({
   email: yup.string().email().required(),
   password: yup.string().required()
@@ -36,7 +34,7 @@ const Login = () => {
       alert('Login failed')
     }
   }
-  
+
 
   return (
     <div className="form-center-wrapper">
@@ -46,7 +44,7 @@ const Login = () => {
         <input className="form-control mb-2" {...register('email')} placeholder="Email" />
         <input className="form-control mb-2" type="password" {...register('password')} placeholder="Password" />
         <button className="btn btn-primary">Login</button>
-         <p>New user, <a href="/register">register here?</a></p>
+         <p>New user..<a href="/register">register here?</a></p>
       </form>
     </div>
     </div>
